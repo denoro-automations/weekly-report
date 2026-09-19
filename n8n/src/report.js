@@ -114,7 +114,7 @@ if (objetivo) insights.push(`Al ritmo actual cerrarías ${objetivo.mes} en ${mon
 if (!orders.length) insights.push('No se han encontrado pedidos en el periodo. Revisa la conexión con la tienda.');
 
 // ---------- HTML (compatible con email y con PDF) ----------
-const C = { ink: '#0f2a3d', muted: '#5b6b7a', line: '#e6eaee', soft: '#f4f6f8', up: '#067647', down: '#b42318', accent: '#1f6feb' };
+const C = { ink: '#191713', muted: '#6e6a61', line: '#e7e4dc', soft: '#f4f3ef', up: '#2c5f3c', down: '#8f2f24', accent: '#235b54' };
 const arrow = (v, inverse = false) => {
   if (v === null) return `<span style="color:${C.muted}">nuevo</span>`;
   const good = inverse ? v <= 0 : v >= 0;
@@ -125,7 +125,7 @@ const tile = (label, value, ch, inverse) => `<td width="25%" style="padding:6px"
 <div style="font-size:12px">${arrow(ch, inverse)} <span style="color:${C.muted}">vs semana anterior</span></div></div></td>`;
 const maxDay = Math.max(1, ...days.map((d) => d.ventas));
 const dayRows = days.map((d) => `<tr><td style="padding:4px 8px 4px 0;font-size:13px;color:${C.muted};white-space:nowrap;width:70px">${esc(d.dia)}</td>
-<td style="padding:4px 0"><div style="background:${d === bestDay ? C.accent : '#9db8d9'};height:16px;border-radius:4px;width:${Math.max(2, Math.round((d.ventas / maxDay) * 100))}%"></div></td>
+<td style="padding:4px 0"><div style="background:${d === bestDay ? C.accent : '#9fbdb7'};height:16px;border-radius:4px;width:${Math.max(2, Math.round((d.ventas / maxDay) * 100))}%"></div></td>
 <td style="padding:4px 0 4px 8px;font-size:13px;text-align:right;white-space:nowrap;width:110px">${money(d.ventas, 0)} · ${d.pedidos}</td></tr>`).join('');
 const th = (s, right) => `<th style="padding:8px;text-align:${right ? 'right' : 'left'};font-size:12px;color:${C.muted};border-bottom:1px solid ${C.line}">${s}</th>`;
 const tdc = (s, right, extra = '') => `<td style="padding:8px;text-align:${right ? 'right' : 'left'};font-size:13px;border-bottom:1px solid ${C.line};${extra}">${s}</td>`;
@@ -154,14 +154,14 @@ ${h3('Top 5 productos')}<table width="100%" cellspacing="0" style="border-collap
 ${stock.length ? `${h3('⚠️ Stock a reponer')}<table width="100%" cellspacing="0" style="border-collapse:collapse"><tr>${th('Producto')}${th('Stock', 1)}${th('Venta/sem', 1)}${th('Cobertura', 1)}</tr>${stockRows}</table>` : ''}
 ${canales.length ? `${h3('Ventas por canal')}<table width="100%" cellspacing="0" style="border-collapse:collapse"><tr>${th('Canal')}${th('Ventas', 1)}${th('Peso', 1)}</tr>${chanRows}</table>` : ''}
 ${goalBlock}
-<p style="margin-top:28px;font-size:12px;color:#98a2b3">Unidades: ${nf(W.unidades)} · Clientes nuevos: ${nf(W.clientes_nuevos_pct, 1)} % · Cancelados: ${W.cancelados} · Importe devuelto: ${money(W.importe_devuelto)}. Generado automáticamente el ${fDate(Date.now(), { dateStyle: 'long' })}.</p>`;
+<p style="margin-top:28px;font-size:12px;color:#8a857a">Unidades: ${nf(W.unidades)} · Clientes nuevos: ${nf(W.clientes_nuevos_pct, 1)} % · Cancelados: ${W.cancelados} · Importe devuelto: ${money(W.importe_devuelto)}. Generado automáticamente el ${fDate(Date.now(), { dateStyle: 'long' })}.</p>`;
 
-const emailHtml = `<!doctype html><html><body style="margin:0;background:#eef1f4;font-family:Arial,Helvetica,sans-serif;color:#1d2939">
+const emailHtml = `<!doctype html><html><body style="margin:0;background:#f4f3ef;font-family:Arial,Helvetica,sans-serif;color:#35322c">
 <table width="100%" cellspacing="0"><tr><td align="center" style="padding:24px">
 <table width="680" cellspacing="0" style="background:#fff;border-radius:12px"><tr><td style="padding:28px">${body}
-<p style="font-size:12px;color:#98a2b3">Adjunto: este informe en PDF.</p></td></tr></table></td></tr></table></body></html>`;
+<p style="font-size:12px;color:#8a857a">Adjunto: este informe en PDF.</p></td></tr></table></td></tr></table></body></html>`;
 const pdfHtml = `<!doctype html><html lang="es"><head><meta charset="utf-8"><title>Informe semanal ${esc(cfg.tienda)}</title>
-<style>@page{size:A4;margin:14mm}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:#1d2939;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+<style>@page{size:A4;margin:14mm}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:#35322c;-webkit-print-color-adjust:exact;print-color-adjust:exact}
 table{page-break-inside:auto}tr{page-break-inside:avoid}h3{page-break-after:avoid}</style></head><body>${body}</body></html>`;
 
 const up = (v) => (v === null ? '' : ` (${pct(v)})`);
