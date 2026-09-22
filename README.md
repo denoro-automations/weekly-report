@@ -40,7 +40,7 @@ Everything is converted to one common format, so the KPIs and the report are the
 - `python n8n/build.py` rebuilds the workflow JSON from the sources.
 - Tested on a real n8n instance.
 
-## Ideas for your store
-Daily Telegram summary · low-stock alerts in real time · Google Sheets export · targets per product line.
+## Possible extensions (not included, quoted separately)
+Daily Telegram summary · real-time low-stock alerts · Google Sheets export · targets per product line.
 
-Want it for your store? Contact me on [Upwork](https://www.upwork.com/) or open an issue.
+Want it for your store? It is included in the Premium plan of the price monitor, or on its own with a fixed quote: [https://denoro-automations.github.io/](https://denoro-automations.github.io/).

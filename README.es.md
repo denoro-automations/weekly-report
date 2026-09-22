@@ -29,3 +29,6 @@ En el nodo *Configuración*, `fuente` puede ser `demo` (pedidos de ejemplo reali
 - El código de cada nodo Code está en `n8n/src/`, con tests fuera de n8n (`node n8n/test/test_weekly_report.js`).
 - `python n8n/build.py` vuelve a generar el workflow.
 - Probado en una instancia real de n8n.
+
+## ¿Lo quieres para tu tienda?
+Viene incluido en el plan Premium del monitor de precios, o por separado con presupuesto cerrado: [https://denoro-automations.github.io/](https://denoro-automations.github.io/).
