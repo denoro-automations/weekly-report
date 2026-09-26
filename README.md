@@ -43,4 +43,4 @@ Everything is converted to one common format, so the KPIs and the report are the
 ## Possible extensions (not included, quoted separately)
 Daily Telegram summary · real-time low-stock alerts · Google Sheets export · targets per product line.
 
-Want it for your store? It is included in the Premium plan of the price monitor, or on its own with a fixed quote: [https://denoro-automations.github.io/](https://denoro-automations.github.io/).
+Want it for your store? It is included in the Premium plan of the price monitor, or on its own with a fixed quote: [https://denoroautomations.com/](https://denoroautomations.com/).

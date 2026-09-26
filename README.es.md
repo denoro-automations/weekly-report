@@ -31,4 +31,4 @@ En el nodo *Configuración*, `fuente` puede ser `demo` (pedidos de ejemplo reali
 - Probado en una instancia real de n8n.
 
 ## ¿Lo quieres para tu tienda?
-Viene incluido en el plan Premium del monitor de precios, o por separado con presupuesto cerrado: [https://denoro-automations.github.io/](https://denoro-automations.github.io/).
+Viene incluido en el plan Premium del monitor de precios, o por separado con presupuesto cerrado: [https://denoroautomations.com/](https://denoroautomations.com/).
